@@ -1,8 +1,6 @@
 from torchvision import transforms
 from customDA.randaugment import RandAugmentMC
 from customDA import np_transforms
-import numpy as np
-import torch
 
 
 class TransformFix_CIFAR(object):

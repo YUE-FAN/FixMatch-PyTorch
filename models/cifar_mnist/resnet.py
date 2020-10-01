@@ -197,17 +197,6 @@ class Resnet50(nn.Module):
 
 
 class Resnet18(nn.Module):
-    """
-    100% CIFAR10: 95.08%
-    80% CIFAR10: 94.07%
-    60% CIFAR10: 93.08%
-    40% CIFAR10: 91.52%
-    20% CIFAR10: 86.49%
-    10% CIFAR10: 77.84%
-    5% CIFAR10: 62.15%
-    1% CIFAR10: 38.8%
-    0.5% CIFAR10: 17.46%
-    """
     def __init__(self, num_classes):
         print('CIFAR_MNIST Resnet18 is used')
         super(Resnet18, self).__init__()

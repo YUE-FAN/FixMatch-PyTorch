@@ -1,6 +1,8 @@
 """
-NOTE: MUST USE conda activate fixmatch
-CUDA_VISIBLE_DEVICES=0,1 python cifar_fixmatch_reproduce_multigpu.py -a wideresnet -d cifar10 -j 8 --epochs 1024 --train_batch 64 --lr 0.03 --init_data 400 --val_data 500 --mu 7 --lambda_u 1 --threshold 0.95 --n_imgs_per_epoch 65536 --checkpoint /BS/yfan/work/trained-models/fixmatch/cifar10/reproduce/wresnet_400_RA_ema_multigpu/ --manualSeed 6 --datasetSeed 6 --use_ema --ema_decay 0.999 --ngpus_per_node 2 --multiprocessing-distributed
+By Yue Fan 2020
+
+Usage:
+CUDA_VISIBLE_DEVICES=0,1 python cifar_fixmatch_reproduce_multigpu.py -a wideresnet -d cifar10 -j 8 --epochs 1024 --train_batch 64 --lr 0.03 --init_data 400 --val_data 500 --mu 7 --lambda_u 1 --threshold 0.95 --n_imgs_per_epoch 65536 --checkpoint SAVE_PATH --manualSeed 6 --datasetSeed 6 --use_ema --ema_decay 0.999 --ngpus_per_node 2 --multiprocessing-distributed
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python cifar_fixmatch_reproduce_multigpu.py -a wideresnet -d cifar100 -j 16 --epochs 1024 --train_batch 64 --lr 0.03 --init_data 100 --val_data 1 --mu 7 --lambda_u 1 --threshold 0.95 --n_imgs_per_epoch 65536 --checkpoint /fan/fixmatch/cifar100/reproduce/wresnet_400_1_RA_ema_multigpu/ --manualSeed 6 --datasetSeed 6 --use_ema --ema_decay 0.999 --ngpus_per_node 8 --multiprocessing-distributed --wd 0.001
 
 """

@@ -26,26 +26,6 @@ class VGG16(nn.Module):
     """
     Difference to original VGG16: GAP is used; BN is used
 
-    100% MNIST: 99.67% 99.66% 99.65%
-    80% MNIST: 99.61% 99.58% 99.54%
-    60% MNIST: 99.56%
-    40% MNIST: 99.45%
-    20% MNIST: 99.07%
-    10% MNIST: 98.91%
-    5% MNIST: 98.16%
-    1% MNIST:  94.52%
-    0.5% MNIST: 88.81%
-
-    100% CIFAR10: 93.59%
-    80% CIFAR10: 93.1%
-    60% CIFAR10: 92.25%
-    40% CIFAR10: 89.91%
-    20% CIFAR10: 85.52%
-    10% CIFAR10: 77.5%
-    5% CIFAR10: 71.18%
-    1% CIFAR10: 42.47%
-    0.5% CIFAR10: 36.05%
-
     """
     def __init__(self, grayscale, num_classes):
         super(VGG16, self).__init__()

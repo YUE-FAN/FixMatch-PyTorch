@@ -1,15 +1,8 @@
 """
-cifar100 weight decay 0.0005 is actually better
-bnwd is actually better
-cv2 RA is the same as PIL RA
+By Yue Fan 2020
 
-cifar100 mean and std is different
-cutout uses gray?
-translate x is int or float?
-sharp 1.8
-Posterize 0-4
-
-python cifar_fixmatch_reproduce.py -a wideresnet_leaky -d cifar100 -j 8 --epochs 1024 --train_batch 64 --lr 0.03 --init_data 100 --val_data 1 --mu 7 --lambda_u 1 --threshold 0.95 --n_imgs_per_epoch 65536 --checkpoint /fan/fixmatch/cifar100/reproduce/wresnetleaky_100_1_RA_ema/ --manualSeed 1 --datasetSeed 1 --use_ema --ema_decay 0.999 --wd 0.0005 --gpu-id 4
+Usage:
+python cifar_fixmatch_reproduce.py -a wideresnet_leaky -d cifar100 -j 8 --epochs 1024 --train_batch 64 --lr 0.03 --init_data 100 --val_data 1 --mu 7 --lambda_u 1 --threshold 0.95 --n_imgs_per_epoch 65536 --checkpoint SAVE_PATH --manualSeed 1 --datasetSeed 1 --use_ema --ema_decay 0.999 --wd 0.0005 --gpu-id 0
 """
 from __future__ import print_function
 
